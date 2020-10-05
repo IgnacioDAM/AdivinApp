@@ -22,7 +22,7 @@ public class AdivinAppFX extends Application {
 	
 	
 	private void empezar() {
-		numpremio = (int) (Math.random() * (101 - 1) + 1);
+		numpremio = (int) (Math.random() * (100 + 1));
 		intentos = 0;
 	}
 
@@ -54,10 +54,12 @@ public class AdivinAppFX extends Application {
 
 			alerta.showAndWait();
 		} else {
-			Alert alerta = new Alert(AlertType.WARNING);
-			alerta.setTitle("AdivinApp");
-			alerta.setHeaderText("¡Has fallado!");
-			alerta.setContentText("El número a adivinar es mayor que " + numero + ".");
+			Alert alerta2 = new Alert(AlertType.WARNING);
+			alerta2.setTitle("AdivinApp");
+			alerta2.setHeaderText("¡Has fallado!");
+			alerta2.setContentText("El número a adivinar es mayor que " + numero + ".");
+			
+			alerta2.showAndWait();
 		}
 	}
 	
@@ -68,8 +70,9 @@ public class AdivinAppFX extends Application {
 			if (numero == numpremio) {
 				alertaAcierto();
 				empezar();
-			} else
+			} else {
 				alertaFallo(numero);
+			}
 
 		} catch (NumberFormatException excepcion) {
 			alertaError();
@@ -79,7 +82,10 @@ public class AdivinAppFX extends Application {
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-
+		
+		//Generar el numero aleatorio
+		empezar();
+		
 		// creamos un cuadro de texto
 		numeroText = new TextField();
 		numeroText.setPrefColumnCount(5);
