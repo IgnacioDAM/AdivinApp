@@ -4,7 +4,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>dad.javaFX.adivinApp</groupId>
+	<groupId>dad.javafx.adivinApp</groupId>
 	<artifactId>AdivinApp</artifactId>
 	<version>1.0.0</version>
 
@@ -15,7 +15,7 @@
 		<maven.compiler.target>14</maven.compiler.target>
 		<maven.compiler.source>14</maven.compiler.source>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>	
-		<exec.mainClass>dad.javafx.AdivinApp.Main</exec.mainClass>
+		<exec.mainClass>dad.javafx.adivinApp.Main</exec.mainClass>
 	</properties>
 
 	<dependencies>
